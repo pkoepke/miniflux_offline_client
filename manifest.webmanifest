@@ -1,0 +1,16 @@
+{
+  "theme_color": "#003FD1",
+  "background_color": "#000000",
+  "display": "minimal-ui",
+  "scope": "/miniflux_offline_client/",
+  "start_url": "/miniflux_offline_client/",
+  "name": "Miniflux Offline Client",
+  "description": "A Miniflux client that stores items in IndexedDB",
+  "icons": [
+    {
+      "src": "/favicon 512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
