@@ -21,8 +21,8 @@ self.addEventListener("install", (e) => {
 self.addEventListener("fetch", (e) => {
   console.log('Caught request: ' + e.request.url);
   console.log('e.request.url.indexOf(\'chrome - extension\' )' + e.request.url.indexOf('chrome-extension'))
-  if (e.request.url.indexOf('chrome-extension') == 0) { // Bypass cache if it's a chrome extension, which cache doesn't support.
-    (async () => { const response = await fetch(e.request); })()
+  if (e.request.url.indexOf('chrome-extension') === 0) { // Bypass cache if it's a chrome extension, which cache doesn't support.
+    (async () => { const response = await fetch(e.request); return response; })()
   }
   e.respondWith(
     (async () => {
