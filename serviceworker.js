@@ -1,3 +1,4 @@
+// TODO: add all files and folders in 
 // TODO: add periodic background sync: https://developer.mozilla.org/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API
 
 const cacheName = 'miniflux_offline_client'
@@ -6,7 +7,8 @@ console.log('Running serviceworker.js');
 // Once the SW is installed, cache files for offline use.
 self.addEventListener("install", (e) => {
   console.log("Service Worker Install event fired, caching files.");
-  const contentToCache = ['index.html', 'script.js', 'styles.css', '/favicon.png']; // Array of URLs to cache.
+  //const contentToCache = ['index.html', 'script.js', 'styles.css', '/favicon.png']; // Array of URLs to cache. Will add all static content when released.
+  const contentToCache = ['/favicon.png']; // Array of URLs to cache, currently limited to just favicon for testing purposes.
   e.waitUntil(
     (async () => {
       const cache = await caches.open(cacheName);
