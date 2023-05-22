@@ -3,3 +3,11 @@
   color: white;
   font-family: sans-serif;
 }
+
+nav,
+header,
+main,
+footer {
+  width: 90%;
+  margin: auto;
+}

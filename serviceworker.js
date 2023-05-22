@@ -1,4 +1,4 @@
-// TODO: add all files and folders in 
+// TODO: add all static files and folders to service worker cache.
 // TODO: add periodic background sync: https://developer.mozilla.org/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API
 
 const cacheName = 'miniflux_offline_client'
