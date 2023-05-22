@@ -19,7 +19,7 @@ self.addEventListener("install", (e) => {
 
 // Listen for network requests and server from cache if possible.
 self.addEventListener("fetch", (e) => {
-  console.log('/miniflux_offline_client/serviceworker.js intercepted a fetch event: ' e.toString()) // Just for testing
+  console.log('/miniflux_offline_client/serviceworker.js intercepted a fetch event: ' + e.toString()) // Just for testing
   e.respondWith(
     (async () => {
       const r = await caches.match(e.request);
