@@ -19,6 +19,7 @@ self.addEventListener("install", (e) => {
 
 // Listen for network requests and server from cache if possible.
 self.addEventListener("fetch", (e) => {
+  console.log('Caught request: ' + e.request)
   e.respondWith(
     (async () => {
       const r = await caches.match(e.request);
