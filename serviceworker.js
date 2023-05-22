@@ -20,6 +20,9 @@ self.addEventListener("install", (e) => {
 // Listen for network requests and server from cache if possible.
 self.addEventListener("fetch", (e) => {
   console.log('Caught request: ' + e.request.url)
+  if (e.request.url.indexOf('chrome-extension') === 0) { // Bypass cache if it's a chrome extension, which cache doesn't support.
+    (async () => { const response = await fetch(e.request); })()
+  }
   e.respondWith(
     (async () => {
       const r = await caches.match(e.request);
