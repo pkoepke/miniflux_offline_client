@@ -1,7 +1,7 @@
 const registerServiceWorker = () => {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("serviceworker.js")
+      .register("/miniflux_offline_client/serviceworker.js")
       .then((registration) => {
         registration.addEventListener("updatefound", () => {
           // If updatefound is fired, it means that there's
